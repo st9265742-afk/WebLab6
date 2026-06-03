@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валютний інформер</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Ліва панель -->
+    <div class="panel left-panel">
+
+        <h2>
+            Курс валют на
+            <span id="current-date"></span>
+        </h2>
+
+        <ul id="currency-list">
+            <li>Завантаження...</li>
+        </ul>
+
+    </div>
+
+    <!-- Права панель -->
+    <div class="panel right-panel">
+
+        <h2>Конвертер валют</h2>
+
+        <h3>Іноземна валюта → Гривня</h3>
+
+        <input
+            type="number"
+            id="amount-foreign"
+            placeholder="Сума">
+
+        <input
+            list="currency-list1"
+            id="currency-input1"
+            placeholder="Валюта">
+
+        <datalist id="currency-list1"></datalist>
+
+        <input
+            type="number"
+            id="amount-uah"
+            readonly>
+
+        <hr>
+
+        <h3>Гривня → Іноземна валюта</h3>
+
+        <input
+            type="number"
+            id="amount-uah2"
+            placeholder="Сума в грн">
+
+        <input
+            list="currency-list2"
+            id="currency-input2"
+            placeholder="Валюта">
+
+        <datalist id="currency-list2"></datalist>
+
+        <input
+            type="number"
+            id="amount-foreign2"
+            readonly>
+
+        <h3 id="history-title">Курс валюти за тиждень</h3>
+
+        <div id="history-output">
+            <p>Виберіть валюту зі списку</p>
+        </div>
+    
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
